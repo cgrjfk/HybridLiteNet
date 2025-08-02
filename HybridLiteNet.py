@@ -28,7 +28,7 @@ class PerformerAttention(nn.Module):
         self.qkv = nn.Linear(dim, dim * 3, bias=False)
         self.proj = nn.Linear(dim, dim)
 
-    def phi(self, x):  # 高斯核映射
+    def phi(self, x):  
         return torch.exp(-0.5 * x.pow(2))
 
     def forward(self, x):
@@ -86,21 +86,18 @@ class HybridLiteNet(nn.Module):
                 attention(out_channels)
             )
 
-        # 多尺度分支
         self.conv1x1 = create_block(3, 32, 1, 1, Mish(), SEBlock)
         self.conv3x3 = create_block(3, 32, 3, 2, Swish(), SEBlock)
         self.conv5x5 = create_block(3, 32, 5, 2, Mish(), SEBlock)
 
         self.asff = ASFF([32, 32, 32])
 
-        # Stem
         self.stem = nn.Sequential(
             nn.Conv2d(96, 64, kernel_size=3, stride=2, padding=1, bias=False),
             nn.BatchNorm2d(64),
             self.swish
         )
 
-        # MBConv Backbone
         self.blocks = nn.Sequential(
             MBConv(64, 32, expand_ratio=1, kernel_size=3, stride=1, se_ratio=0.25),
             MBConv(32, 32, expand_ratio=4, kernel_size=3, stride=2, se_ratio=0.25),
@@ -122,7 +119,6 @@ class HybridLiteNet(nn.Module):
         self.attn_dim = 160
         self.trans_block = TransBlock(self.attn_dim, heads=4, mlp_ratio=2)
 
-        # 分类头
         self.head = nn.Sequential(
             nn.Conv2d(160, 320, kernel_size=1, bias=False),
             nn.BatchNorm2d(320),
@@ -159,4 +155,5 @@ class HybridLiteNet(nn.Module):
 
         out = self.head(features)
         return out
+
 
