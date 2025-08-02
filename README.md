@@ -20,7 +20,7 @@ A **lightweight hybrid CNN + Transformer model** designed for CIFAR-10.
 
   * Train Acc: 89.68%
   * Test Acc: 93.06%
-  * Best Acc **93.11%**
+  * Best Acc: **93.11%**
 ```
 Epoch [350/350]
 Train Loss: 0.7386 | Train Acc: 89.68%
