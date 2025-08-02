@@ -2,11 +2,11 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from AttentionBlock.MBConvBolck import MBConv
-from ActFunction.MishActivate import Mish
-from ActFunction.SwishActivate import Swish
-from AttentionBlock.SEBolck import SEBlock
-from runs.ASFFNeck import ASFF
+from MBConvBolck import MBConv
+from MishActivate import Mish
+from SwishActivate import Swish
+from SEBolck import SEBlock
+from ASFFNeck import ASFF
 
 
 # ---- RMSNorm and TransBlock  ----
@@ -159,3 +159,4 @@ class HybridLiteNet(nn.Module):
 
         out = self.head(features)
         return out
+
