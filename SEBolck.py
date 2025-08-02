@@ -1,15 +1,12 @@
 import torch.nn as nn
 
 
-# SE注意力机制模块
 class SEBlock(nn.Module):
     def __init__(self, in_channels, reduction=16):
         super(SEBlock, self).__init__()
 
-        # 全局池化
         self.avg_pool = nn.AdaptiveAvgPool2d(1)
 
-        # 使用卷积层代替线性层，增加网络的表达能力
         self.fc = nn.Sequential(
             nn.Conv2d(in_channels, in_channels // reduction, kernel_size=1, bias=False),
             nn.ReLU(inplace=True),
@@ -19,11 +16,8 @@ class SEBlock(nn.Module):
 
     def forward(self, x):
         b, c, _, _ = x.size()
-        # 使用全局平均池化
         y = self.avg_pool(x)
-        # 通道权重生成
         y = self.fc(y)
-        # 扩展到输入的维度
         return x * y.expand_as(x)
 
 
@@ -48,3 +42,4 @@ class SEBlock(nn.Module):
         y = self.sigmoid(self.fc2(y)).view(batch_size, channels, 1, 1)
         return x * y.expand_as(x)
 '''
+
