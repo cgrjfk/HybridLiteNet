@@ -1,4 +1,4 @@
-# HybridLiteNet: A Lightweight Multi-Branch Hybrid Network with Transformer Attention
+## HybridLiteNet: A Lightweight Multi-Branch Hybrid Network with Transformer Attention
 
 > 🚀 Achieved **93.11% Accuracy** on CIFAR-10 with **only 0.8M parameters**.
 
