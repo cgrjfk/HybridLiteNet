@@ -1,6 +1,5 @@
 import torch.nn as nn
 
-
 class SEBlock(nn.Module):
     def __init__(self, in_channels, reduction=16):
         super(SEBlock, self).__init__()
