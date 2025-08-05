@@ -36,7 +36,7 @@ def main():
     trainloader = DataLoader(trainset, batch_size=128, shuffle=True, num_workers=4)
     testloader = DataLoader(testset, batch_size=100, shuffle=False, num_workers=4)
 
-    # 模型、损失函数、优化器
+    # model、loss function、optimizer
     model = HybridLiteNet(num_classes=10).to(device)
     criterion = nn.CrossEntropyLoss(label_smoothing=0.1)  # label smoothing
     optimizer = optim.AdamW(model.parameters(), lr=1e-3, weight_decay=0.05)  # 0.05
