@@ -7,7 +7,7 @@ from tqdm import tqdm
 from HybridLiteNet import HybridLiteNetV2
 from train import CachedDataset
 
-# 薄弱类别索引（基于您的分类报告）
+# 薄弱类别索引
 # bird=2, cat=3, dog=5
 WEAK_CLASSES = [2, 3, 5]  # bird, cat, dog
 
