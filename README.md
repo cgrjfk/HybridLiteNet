@@ -6,18 +6,6 @@ HybridLiteNet is a compact yet powerful deep learning architecture that integrat
 
 ---
 
-## 🌟 Highlights
-
-- ✅ **Multi-Scale Convolution Branches**: Parallel 1×1, 3×3, and 5×5 convolution branches capture diverse receptive fields.
-- ✅ **ASFF (Adaptive Spatial Feature Fusion)**: Learnable fusion weights across branches for optimal spatial representation.
-- ✅ **MBConv Backbone**: Depthwise separable inverted residual blocks with SE attention for lightweight efficiency.
-- ✅ **Performer-style Transformer Block**: Low-rank attention + Depthwise MLP for global feature modeling with minimal overhead.
-- ✅ **Swish/Mish Activations + SE Attention**: Nonlinear expressiveness and channel reweighting enhance discrimination.
-- ✅ **RMSNorm**: Lightweight normalization replacing BatchNorm in Transformer blocks.
-- ✅ **Only ~0.8M parameters** with **93.11% accuracy on CIFAR-10**.
-
----
-
 ## 🧱  HybridLiteNetV1
 
 ```text
