@@ -145,6 +145,29 @@ Input (1,3,32,32)
 - Efficiency: Low computation via depthwise conv and linear attention
 
 ---
+## TTA-result
+```
+TTA Accuracy (Enhanced for weak classes): 96.21% 
+Baseline Accuracy: 96.18% 
+Improvement: +0.03% 
+Weak classes (extra augmentations): ['bird', 'cat', 'dog'] 
+
+              precision    recall  f1-score   support 
+
+    airplane       0.97      0.96      0.96      1000 
+  automobile       0.98      0.98      0.98      1000 
+        bird       0.95      0.95      0.95      1000 
+         cat       0.92      0.91      0.92      1000 
+        deer       0.97      0.97      0.97      1000 
+         dog       0.93      0.93      0.93      1000 
+        frog       0.98      0.98      0.98      1000 
+       horse       0.98      0.97      0.98      1000 
+        ship       0.97      0.98      0.97      1000 
+       truck       0.97      0.97      0.97      1000 
+
+    accuracy                           0.96     10000 
+   macro avg       0.96      0.96      0.96     10000 
+weighted avg       0.96      0.96      0.96     10000```
 
 ### Summary
 - **HybridLiteNetV2** is a new lightweight hybrid CNN-Transformer model
