@@ -1,6 +1,6 @@
 ## HybridLiteNetV2: A Lightweight Multi-Branch Hybrid Network with Transformer Attention
 
-> 🚀 Achieved **95.95% Accuracy** on CIFAR-10 with **only 0.99M parameters if use TTA the model can get 96.18%**.
+> 🚀 Achieved **95.95% Accuracy** on CIFAR-10 with **only 0.99M parameters if use TTA the model can get 96+%**.
 
 HybridLiteNet is a compact yet powerful deep learning architecture that integrates multi-branch convolution, ASFF-based feature fusion, and lightweight Transformer blocks. Designed for efficiency and high accuracy, it is suitable for small-scale image recognition tasks like CIFAR-10, CIFAR-100, and TinyImageNet.
 
