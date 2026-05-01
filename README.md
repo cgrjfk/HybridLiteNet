@@ -18,7 +18,7 @@ HybridLiteNet is a compact yet powerful deep learning architecture that integrat
 
 ---
 
-## 🧱  old Model Architecture
+## 🧱  HybridLiteNetV1
 
 ```text
 Input (3×32×32)
@@ -49,7 +49,7 @@ Input (3×32×32)
 │
 └── Output (Logits, shape: [batch_size, 10])
  ```
-## 🚀new Model
+## 🚀HybridLiteNetV2
 # HybridLiteNetV2 Model Architecture 
 ## Overall Overview
 **HybridLiteNetV2** is a lightweight, efficient hybrid vision model that combines **ConvNeXt convolutional blocks**, **ECA attention**, **Linear Attention Transformer**, and modern CNN design patterns. It’s optimized for small-scale image inputs (e.g., 32×32) and classification tasks, with a lightweight parameter count (~0.99M).
