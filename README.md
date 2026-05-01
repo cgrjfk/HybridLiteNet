@@ -148,7 +148,7 @@ Input (1,3,32,32)
 ## TTA-result
 ```
 TTA Accuracy (Enhanced for weak classes): 96.21% 
-Baseline Accuracy: 96.18% 
+Baseline Accuracy with tta: 96.18% 
 Improvement: +0.03% 
 Weak classes (extra augmentations): ['bird', 'cat', 'dog'] 
 
@@ -167,7 +167,8 @@ Weak classes (extra augmentations): ['bird', 'cat', 'dog']
 
     accuracy                           0.96     10000 
    macro avg       0.96      0.96      0.96     10000 
-weighted avg       0.96      0.96      0.96     10000```
+weighted avg       0.96      0.96      0.96     10000
+```
 
 ### Summary
 - **HybridLiteNetV2** is a new lightweight hybrid CNN-Transformer model
